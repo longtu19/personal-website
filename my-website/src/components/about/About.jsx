@@ -7,9 +7,10 @@ import {AiOutlineProject} from 'react-icons/ai'
 
 const About = () => {
     return (
-        <section id = 'about'>
-            <h5>Get To Know</h5>
-            <h2>About Me</h2>
+        <section id = 'about' >
+            
+            <h5 id = "title">Get To Know</h5>
+            <h2 className = "big__title">About Me</h2>
 
             <div className= "container about__container">
                 <div className = "about__me">
@@ -24,7 +25,7 @@ const About = () => {
                         <article className = "about__card">
                             <CgWorkAlt className = "about__icon"/>
                             <h5>Experience</h5>
-                            <small>2+ Years Working</small>
+                            <small className = "smaller__title">2+ Years Working</small>
 
                         </article>
 

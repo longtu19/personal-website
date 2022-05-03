@@ -4,6 +4,16 @@
     gap: 15%;
 }
 
+
+.big__title {
+    color: #F59351;
+}
+
+#title {
+    color: #FFA96E;
+}
+
+
 .about__me {
     width: 100%;
     aspect-ratio: 1/1;
@@ -11,7 +21,7 @@
     background: linear-gradient(
         45deg,
         transparent,
-        var(--color-primary),
+        #FFA96E,
         transparent
     );
     display: grid;
@@ -37,7 +47,7 @@
 }
 
 .about__card {
-    background: var(--color-bg-variant);
+    background: #FFA16E;
     border: 1px solid transparent;
     border-radius: 1rem;
     padding: 2rem;
@@ -59,11 +69,12 @@
 
 .about__card h5 {
     font-size: 0.95rem;
+    color:  #164EA3;
 }
 
 .about__card small {
     font-size: 0.7rem;
-    color: var(--color-light);
+    color: #164EA3 ;
 }
 
 .about__content p {
