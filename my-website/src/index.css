@@ -706,12 +706,13 @@ a:hover {
   color: var(--color-bg);
 }
 .btn-about {
-    background: #FFA16E;
+    background: #f6fabf;
     color: #164EA3;
    
 }
 .btn-about:hover {
-    background: #16A8A3;
+    background: #164EA3;
+    color: #f6fabf;
     border-color: var(--color-primary-variant);
     cursor: default;
 }
