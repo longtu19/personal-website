@@ -1,5 +1,5 @@
 import React from 'react'
-import Long_Huynh_resume from '../../assets/Long_Huynh_Resume.pdf'
+import Long_Huynh_resume from '../../assets/Long_Huynh_resume.pdf'
 
 const CTA = () => {
     return (
