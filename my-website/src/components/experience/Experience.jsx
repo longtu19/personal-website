@@ -1,13 +1,14 @@
-import React, { useLayoutEffect, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./experience.css";
+import "./listStyle.css";
 import epifinder from "../../assets/epi.png";
 import xcel from "../../assets/xcel.jpg";
 import catsboston from "../../assets/catsboston.jpg";
 import m3 from "../../assets/m3.jpg";
 import Odometer from "react-odometerjs";
 import "odometer/themes/odometer-theme-default.css";
-import { Component } from "react";
-import { useIsMount } from './useIsMount';
+import { CSSTransition, TransitionGroup } from "react-transition-group";
+import {xCel} from './jobs'
 const Experience = ({
   EpiMouseOver,
   EpiMouseOut,
@@ -59,20 +60,28 @@ const Experience = ({
 const HoverEpi = () => {
   return (
     <div className="d-flex align-items-center justify-content-center">
-      <h5>Software Engineering Intern</h5>
+      <h5 className="job__title">Software Engineering Intern</h5>
       <ul>
         <li>
-        Implement and upgrade automation for various software, websites, and apps for medical purposes        
+          Implement and upgrade automation for various software, websites, and
+          apps for medical purposes
         </li>
         <li>
-        Update and test clinical screening tool to map symptoms with evidence-based algorithm to diagnose epilepsy with high accuracy        </li>
-        <li>
-        Enhance self-management tool to help patients document their seizures, medications, daily activities for doctoral interpretation        </li>
-        <li>
-          Developed and automated flickering lights by Arduino to serve in the Fashion Show 2018 at CATS Boston
+          Update and test clinical screening tool to map symptoms with
+          evidence-based algorithm to diagnose epilepsy with high accuracy
         </li>
         <li>
-        Web-enable for individual customers and business’ demands such as digital marketing, advertisement, software maintenance, etc.        </li>
+          Enhance self-management tool to help patients document their seizures,
+          medications, daily activities for doctoral interpretation
+        </li>
+        <li>
+          Developed and automated flickering lights by Arduino to serve in the
+          Fashion Show 2018 at CATS Boston
+        </li>
+        <li>
+          Web-enable for individual customers and business’ demands such as
+          digital marketing, advertisement, software maintenance, etc.
+        </li>
       </ul>
     </div>
   );
@@ -80,22 +89,27 @@ const HoverEpi = () => {
 const HoverCats = () => {
   return (
     <div className="d-flex align-items-center">
-      <h5>Software Engineering Intern</h5>
+      <h5 className="job__title">Software Engineering Intern</h5>
       <ul>
         <li>
-          Implemented a robot using Arduino, open-source software based on C++, for transporting objects to increase staff efficiency
+          Implemented a robot using Arduino, open-source software based on C++,
+          for transporting objects to increase staff efficiency
         </li>
         <li>
-          Increased the range of control of the robot up to 100 feet by connecting the PlayStation4 controller to its movement system
+          Increased the range of control of the robot up to 100 feet by
+          connecting the PlayStation4 controller to its movement system
         </li>
         <li>
-          Redeveloped and optimized the robot's movement speed from 7mph to 18mph to present at Tech Fair 2019 at CATS Academy
+          Redeveloped and optimized the robot's movement speed from 7mph to
+          18mph to present at Tech Fair 2019 at CATS Academy
         </li>
         <li>
-          Developed and automated flickering lights by Arduino to serve in the Fashion Show 2018 at CATS Boston
+          Developed and automated flickering lights by Arduino to serve in the
+          Fashion Show 2018 at CATS Boston
         </li>
         <li>
-          Utilized a resistor enabling blink rate of LED for the lights to reduce manual work by 40% operation time
+          Utilized a resistor enabling blink rate of LED for the lights to
+          reduce manual work by 40% operation time
         </li>
       </ul>
     </div>
@@ -104,21 +118,27 @@ const HoverCats = () => {
 const HoverM3 = () => {
   return (
     <div className="d-flex align-items-center justify-content-center">
-     <h5>Software Engineering Intern</h5>
+      <h5 className="job__title">Software Engineering Intern</h5>
       <ul>
         <li>
-        Led a team of 5 high school seniors to create methodical mathematical models to solve given world problems        
+          Led a team of 5 high school seniors to create methodical mathematical
+          models to solve given world problems
         </li>
         <li>
-        Built a model using Java, mathematics, and statistic to predict what percentage of semi-truck will be electric in the next few years        </li>
-        <li>
-        Enabled the model to determine the needed number of locations of charging stations along major U.S. trucking routes        
+          Built a model using Java, mathematics, and statistic to predict what
+          percentage of semi-truck will be electric in the next few years{" "}
         </li>
         <li>
-        Upgraded the model to prioritize which routes to develop first with electric charging infrastructure        
+          Enabled the model to determine the needed number of locations of
+          charging stations along major U.S. trucking routes
         </li>
         <li>
-        Improved leadership, analytical thinking, and teamwork skills by competing in the challenge        
+          Upgraded the model to prioritize which routes to develop first with
+          electric charging infrastructure
+        </li>
+        <li>
+          Improved leadership, analytical thinking, and teamwork skills by
+          competing in the challenge
         </li>
       </ul>
     </div>
@@ -127,76 +147,61 @@ const HoverM3 = () => {
 const HoverXcel = () => {
   return (
     <div className="d-flex align-items-center justify-content-center">
-     <h5>Maths Tutor</h5>
-      <ul>
-        <li>
-        Instructed middle-aged students in Algebra 2 and Calculus I to prepare them for math exams for industrial working        
-        </li>
-        <li>
-        Instructed middle-aged students in Algebra 2 and Calculus I to prepare them for math exams for industrial working        
-        </li>
-        <li>
-        Improved tutee's grades from B- to A and increased their probability of passing the exams by 95%       
-        </li>
-        <li>
-        Gained the ability to communicate complex mathematical concepts to learners of diverse skill sets
-        </li>
+      <h5 className="job__title">Maths Tutor</h5>
+      <section className = "list">
+        <div className="list-item">
+        <div className = "item-body" >
+          {xCel.map((e, idx) => (
+            <li style = {{"--order": idx}}>{e.task}</li>
+          ))}
+        </div>
+        </div>
+
+      </section>
+     
       
-      </ul>
+
+
+
+      
+      
     </div>
+
+    
   );
 };
 
-
 let trackOdometer = 0;
-function Number()  {
+function Number() {
   const [odometerVal, setOdometerVal] = useState(trackOdometer);
 
   const ref = useRef();
 
-  useEffect(
-    () => {
-      
-        if (trackOdometer == 0){
-          window.addEventListener('scroll', scrollHandler);
- 
-          return () => window.removeEventListener('scroll', scrollHandler);
+  useEffect(() => {
+    if (trackOdometer == 0) {
+      window.addEventListener("scroll", scrollHandler);
 
+      return () => window.removeEventListener("scroll", scrollHandler);
+    }
+  }, [odometerVal]);
 
-        }
-        
-    
-}, [odometerVal]);
-
-const scrollHandler = () => {
-    
-    if(window.pageYOffset + window.innerHeight> ref.current.offsetTop){
+  const scrollHandler = () => {
+    if (window.pageYOffset + window.innerHeight > ref.current.offsetTop) {
       setOdometerVal(17280);
       trackOdometer = 17280;
     }
-           
-    
-}
+  };
 
-    return (
-      
-      <div className="row" id="metric">
-        {/* <button className="num__button col-6" onClick={this.handleClick}> */}
-          {
-            
-            <div  ref = {ref}><Odometer
-            value= {odometerVal}
-            format="d"
-            duration={1000}
-          /></div>
-            
-          }
-        {/* </button> */}
-        <div className="col-1">+</div>
-        <div className="col-12">HOURS WORKING</div>
+  return (
+    <div className="row" id="metric">
+      <div className="col-4" ref={ref}>
+        <Odometer value={odometerVal} format="d" duration={1000} />
       </div>
-    );
-  
+      <div className="col-1">+</div>
+
+      <div className="col-12">HOURS WORKING</div>
+    </div>
+  );
 }
 
 const MainExp = () => {
@@ -235,7 +240,6 @@ const MainExp = () => {
   const M3MouseOut = () => {
     setIsM3Hovering(false);
   };
-  
 
   return (
     <section id="experience">
@@ -263,7 +267,7 @@ const MainExp = () => {
           {!isCatsHovering &&
             !isEpiHovering &&
             !isM3Hovering &&
-            !isXcelHovering && <Number/>}
+            !isXcelHovering && <Number />}
           {isEpiHovering && <HoverEpi />}
           {isCatsHovering && <HoverCats />}
           {isM3Hovering && <HoverM3 />}

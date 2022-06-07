@@ -1,30 +1,32 @@
 
-
-
-
-
-   
   
+.job__title{
+    color: #E64D3C;
+    margin-right: 2%;
+}
 
+#exp__title{
+    color: #941A18;
+
+}
   
 
 #metric{
-    color:  #9E5337;
+    color:  #941A18;
     font-size: 70px;
     margin-left: 17%;
 }
 
-.num__button{
-background-color:#9E5337; /* Green */
-  border: none;
-  border-radius: 3rem;
-  color: #98CBEB;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 70px;
-  size: 2%;
+.job_info{
+    border: 1px solid #941A18;
+    margin-right:10%;
+    color: #9E5337;
+    padding: 40px;
+    display: list-item;
+
+
 }
+
 
 
 .slider {
