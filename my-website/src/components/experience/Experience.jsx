@@ -146,15 +146,15 @@ const HoverM3 = () => {
 };
 const HoverXcel = () => {
   return (
-    <div className="d-flex align-items-center justify-content-center">
-      <h5 className="job__title">Maths Tutor</h5>
-      <section className = "list">
+    <div className="d-flex align-items-center justify-content-center mb-2 mt-0">
+      <h5 className="job__title col-3 align-middle">Maths Tutor</h5>
+      <section className = "list col-3">
         <div className="list-item">
-        <div className = "item-body" >
-          {xCel.map((e, idx) => (
-            <li style = {{"--order": idx}}>{e.task}</li>
-          ))}
-        </div>
+          <div className = "item-body" >
+            {xCel.map((e, idx) => (
+              <li style = {{"--order": idx}}>{e.task}</li>
+            ))}
+          </div>
         </div>
 
       </section>
@@ -194,7 +194,7 @@ function Number() {
 
   return (
     <div className="row" id="metric">
-      <div className="col-4" ref={ref}>
+      <div className="odo col-4" ref={ref}>
         <Odometer value={odometerVal} format="d" duration={1000} />
       </div>
       <div className="col-1">+</div>

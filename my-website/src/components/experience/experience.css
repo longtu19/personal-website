@@ -88,3 +88,13 @@
 .slider:hover{
     animation-play-state: paused;
 }
+
+.odo {
+    background: #C8563B;
+    width: 4em;
+    padding-left: 2.5rem;
+    padding-right: 1.2rem;
+    border-radius: 52% 48% 50% 50% / 100% 0% 100% 0%; 
+    color: #C5EAF2;
+
+}
