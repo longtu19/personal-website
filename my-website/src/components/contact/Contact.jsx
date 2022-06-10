@@ -28,8 +28,8 @@ const Contact = () => {
             <div id = "stars"></div>
             <div id = "stars2"></div>
             <div id = "stars3"></div>
-            <h5>Get In Touch</h5>
-            <h2>Contact Me</h2>
+            <h5 id = "contact_subtitle">Get In Touch</h5>
+            <h2 id = "contact_title">Contact Me</h2>
 
             <div className="container contact__container">
                 <div className="contact__options">
@@ -60,7 +60,7 @@ const Contact = () => {
                     <input type = "text" name = "name" placeholder = "Your Full Name" required />
                     <input type = "email" name = "email" placeholder = "Your Email" required />
                     <textarea name = "message"  rows = "7" placeholder = "Your Message" />
-                    <button type = "submit" className = "btn btn-primary">Send Message</button>
+                    <button type = "submit" className = "btn btn-contact">Send Message</button>
 
                 </form>
             </div>

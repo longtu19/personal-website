@@ -3,6 +3,8 @@ import "./portfolio.css";
 import machine from "../../assets/Machine.jpg";
 import room from "../../assets/room.jpg";
 import code from "../../assets/code.jpg";
+import covid19 from "../../assets/covid19.jpg";
+import bot from "../../assets/statBot.jpg";
 import ristorante from "../../assets/ristorante.jpg";
 
 const data = [
@@ -16,20 +18,32 @@ const data = [
     id: 2,
     image: room,
     title: "Detective Game",
-    github: "https://github.com",
+    github: "#contact",
   },
   {
     id: 3,
     image: machine,
     title: "Finite State Machine",
-    github: "https://github.com",
+    github: "#contact",
   },
   {
     id: 4,
     image: code,
     title: "Code Interpreter",
-    github: "https://github.com",
+    github: "#contact",
   },
+  {
+    id: 5,
+    image: covid19,
+    title: "Covid-19 Appoinment Synchronization",
+    github: "#contact",
+  },
+  {
+    id: 6,
+    image: bot,
+    title: "Statistic Bot",
+    github: "#contact",
+  }
 ];
 
 const porfolio = () => {
@@ -47,7 +61,7 @@ const porfolio = () => {
               </div>
               <h3>{title}</h3>
               <div className="portfolio__item-cta">
-                <a href={github} className="btn" target="_blank">
+                <a href = {github} className="btn btn-project">
                   More Information
                 </a>
                 

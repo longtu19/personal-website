@@ -11,6 +11,10 @@ footer a {
     color: var(--color-bg);
 }
 
+footer a:hover {
+    color: #14A1F9;
+}
+
 .footer__logo {
     font-size: 2rem;
     font-weight: 500;

@@ -13,7 +13,7 @@
 }
 
 .contact__option {
-    background: var(--color-bg-variant);
+    background: #00A2C7;
     padding: 1.2rem;
     border-radius: 1.2rem;
     text-align: center;
@@ -38,6 +38,16 @@
 
 
 }
+.contact__options h5{
+    font-size: 0.7rem;
+}
+
+#contact_title{
+    color: #41D8FA;
+}
+#contact_subtitle{
+    color: #8CE7FB;
+}
 
 form {
     display: flex;
@@ -50,10 +60,15 @@ input, textarea {
     padding: 1.5rem;
     border-radius: 0.5rem;
     background: transparent;
-    border: 2px solid var(--color-primary-variant);
+    border: 2px solid #00A2C7;
     resize: none;
     color: var(--color-white);
 
+}
+
+.btn-contact{
+    background: #00A2C7;
+    color: var(--color-primary);
 }
 
 

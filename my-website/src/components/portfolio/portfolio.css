@@ -32,12 +32,18 @@
     justify-content: center;
 
 }
+
 #project__title{
     color: #236AAD;
 }
 #project__subtitle{
     margin-top: 10em;
     color: #267C9E;
+}
+
+.btn-project:hover{
+    color: #0B00A8;
+    background: #F5D114;
 }
 
 @media screen and (max-width: 1024px) {
