@@ -7,7 +7,6 @@ import catsboston from "../../assets/catsboston.jpg";
 import m3 from "../../assets/m3.jpg";
 import Odometer from "react-odometerjs";
 import "odometer/themes/odometer-theme-default.css";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
 import {xCel, cats, epi, m3c} from './jobs'
 const Experience = ({
   EpiMouseOver,
@@ -59,14 +58,14 @@ const Experience = ({
 
 const HoverEpi = () => {
   return (
-    <div className="xcel d-flex">
-    <div className = "job__title col-3">
-      <h5>Incoming Software Engineering Intern</h5>
-      <small className = "date">06/02/2019 - 08/24/2019</small>
+    <div className="container epi">
+    <div className = "job__title ">
+      <h5>Software Engineering Intern</h5>
+      <small className = "date">06/02/2022 - 08/24/2022</small>
 
     </div>
    
-    <section className = "list col-3">
+    <section className = "list">
       <div className="list-item">
         <div className = "item-body" >
           {epi.map((e, idx) => (
@@ -82,14 +81,14 @@ const HoverEpi = () => {
 };
 const HoverCats = () => {
   return (
-    <div className="cats d-flex">
-      <div className = "job__title col-3">
+    <div className="container cats">
+      <div className = "job__title">
         <h5>Robotic Developer</h5>
-        <small className = "date">06/02/2019 - 08/24/2019</small>
+        <small className = "date">02/01/2018 - 11/24/2019</small>
 
       </div>
     
-      <section className = "list col-3">
+      <section className = "list">
         <div className="list-item">
           <div className = "item-body" >
             {cats.map((e, idx) => (
@@ -106,14 +105,14 @@ const HoverCats = () => {
 };
 const HoverM3 = () => {
   return (
-    <div className="m3c d-flex">
-    <div className = "job__title col-3">
+    <div className="container m3c">
+    <div className = "job__title ">
       <h5>Team Leader</h5>
-      <small className = "date">06/02/2019 - 08/24/2019</small>
+      <small className = "date">02/12/2019 - 02/20/2020</small>
 
     </div>
    
-    <section className = "list col-3">
+    <section className = "list">
       <div className="list-item">
         <div className = "item-body" >
           {m3c.map((e, idx) => (
@@ -130,18 +129,18 @@ const HoverM3 = () => {
 };
 const HoverXcel = () => {
   return (
-    <div className="xcel d-flex">
-      <div className = "job__title col-3">
+    <div className="container xcel">
+      <div className = "job__title">
         <h5>Maths Tutor</h5>
         <small className = "date">06/02/2019 - 08/24/2019</small>
 
       </div>
      
-      <section className = "list col-3">
+      <section className = "list">
         <div className="list-item">
           <div className = "item-body" >
             {xCel.map((e, idx) => (
-              <li style = {{"--order": idx}}>{e.task}</li>
+              <li key = {idx} style = {{"--order": idx}}>{e.task}</li>
             ))}
           </div>
         </div>
@@ -154,6 +153,7 @@ const HoverXcel = () => {
   );
 };
 
+//col-sm-12 col-lg-3
 let trackOdometer = 0;
 function Number() {
   const [odometerVal, setOdometerVal] = useState(trackOdometer);
@@ -177,12 +177,17 @@ function Number() {
 
   return (
     <div className="row" id="metric">
-      <div className="odo col-4" ref={ref}>
-        <Odometer value={odometerVal} format="d" duration={1000} />
-      </div>
-      <div className="col-1">+</div>
+      <div className="odo row" ref={ref}>
+        <div className = "col-sm-12 col-lg-9">
+        <Odometer value={odometerVal} format="d" duration={1700} />
+        <span style = {{ fontSize: "50px", position: "absolute", marginTop: "2rem"}}>+</span>
 
-      <div className="hour col-12 mt-2">HOURS WORKING</div>
+        </div>
+        
+      </div>
+      
+
+      <div className="hour col-sm-12 col-lg-4 mt-2">HOURS WORKING</div>
     </div>
   );
 }
@@ -228,8 +233,8 @@ const MainExp = () => {
     <section id="experience">
       <h5 id="exp__subtitle">Where I worked</h5>
       <h2 id="exp__title">My Experience</h2>
-      <div className="row mt-3">
-        <div className="col-5">
+      <div className="container exp-container mt-3">
+        <div className="left">
           <Experience
             EpiMouseOver={EpiMouseOver}
             EpiMouseOut={EpiMouseOut}
@@ -246,11 +251,11 @@ const MainExp = () => {
           />
         </div>
 
-        <div className="col-7">
+        <div className="right">
           {!isCatsHovering &&
             !isEpiHovering &&
             !isM3Hovering &&
-            !isXcelHovering && <Number />}
+            !isXcelHovering && <HoverM3 />}
           {isEpiHovering && <HoverEpi />}
           {isCatsHovering && <HoverCats />}
           {isM3Hovering && <HoverM3 />}

@@ -25,7 +25,7 @@ const Footer = () => {
             </div>
 
             <div className="footer__copyright">
-                <small>&copy; Long Huynh. All rights reserved.</small>
+                <small>&copy; 2022 by Long Huynh. All rights reserved.</small>
             </div>
         </footer>
 

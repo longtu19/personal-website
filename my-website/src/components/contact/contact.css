@@ -71,6 +71,11 @@ input, textarea {
     color: var(--color-primary);
 }
 
+::placeholder{
+    color: white;
+    opacity: 1;
+}
+
 
 @media screen and (max-width: 1024px) {
     .container.contact__container {

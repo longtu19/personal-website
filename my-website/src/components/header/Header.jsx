@@ -13,7 +13,7 @@ const Header = () => {
             <div className = "container header__container">
                 
                 <h5>Hello, I am</h5>
-                <h1>Long Huynh</h1>
+                <h1>Long <span style={{ color: "var(--color-primary)" }}>Huynh</span></h1>
                 <h5 className = "text-light">Software Developer</h5>
                 <CTA/>
                 <HeaderSocials/>

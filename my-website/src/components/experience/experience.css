@@ -1,12 +1,24 @@
+.exp-container{
+    display: grid;
+    grid-template-columns: 0.7fr 1.2fr;
+    gap: 7rem;
+}
 
-  
+.left{
+    display: flex;
+    margin: 0 auto;
+}
+
+
+ 
 .job__title h5{
-    color: #E64D3C;
+    color: #2B3FC2;
+    margin-top: 2rem;
 }
 .job__title .date{
-    background: #C8563B;
-    color: #C5EAF2;
-    padding: 4px;
+    background: #1EB859;
+    color: white;
+    padding: 6px;
 }
 
 #exp__title{
@@ -20,15 +32,14 @@
   
 
 #metric{
+    display: flex;
+    cursor: default;
     color:  #A83800;
-    font-size: 70px;
-    margin-left: 17%;
     margin-bottom: 4.5rem;
 }
 
 .job_info{
     border: 1px solid #A83800;
-    margin-right:10%;
     color: #9E5337;
     padding: 40px;
     display: list-item;
@@ -38,34 +49,25 @@
 .hour {
     background: #A83800;
     color: #C5EAF2;
-    width: 9em;
-    padding-left: 1.5rem;
+    width: 9.5em;
+    align-items: center;
+    padding-left: 1.8rem;
+    font-size: 50px;
 }
 
 
 
 .slider {
     position: relative;
-    width: 200px;
-    height: 200px;
-    left: 40%;
+    width: 250px;
+    height: 250px;
+    margin-top: 11%;
     transform-style: preserve-3d;
     animation: rotate 10s linear infinite;
   
   
 }
 
-
-
-@keyframes rotate {
-    0%{
-        transform: perspective(1000px) rotateY(0deg);
-    }
-    100%{
-        transform: perspective(1000px) rotateY(360deg);
-    }
-
-}
 
 .slider span {
     position: absolute;
@@ -105,11 +107,94 @@
 }
 
 .odo {
-    background: #A83800;
-    width: 4em;
     padding-left: 2.5rem;
     padding-right: 1.2rem;
-    /* border-radius: 52% 48% 50% 50% / 100% 0% 100% 0%;  */
-    color: #C5EAF2;
+    font-size: 120px;
+    color: #A83800;
 
 }
+
+
+
+
+@media screen and (max-width: 1025px) {
+    .odo.row{
+        margin-left: 11%;
+        margin-top: 5rem;
+    }
+    #metric .hour{
+        width: 30rem;
+        margin-left: 12%;
+    }
+   
+    .exp-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+
+    }
+   
+   
+}
+
+@media screen and (max-width: 700px) {
+    .odo.row {
+        margin-left: 2%;
+        font-size: 50px;
+    }
+    #metric .hour{
+        font-size: 29px;
+        width: 18rem;
+        margin-left: 1%;
+        padding-left: 1.4rem;
+    }
+    .slider {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 1rem;
+        animation: none !important;
+
+        
+    }
+    
+
+    .slider span {
+        position: unset;
+        transform: none;
+    }
+    .slider span img{
+        opacity: 0.5;
+    }
+    .slider span:hover img {
+        opacity: 1;
+        transform: none;
+    }
+
+    
+
+
+
+}
+
+
+
+
+
+
+
+@keyframes rotate {
+    0%{
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100%{
+        transform: perspective(1000px) rotateY(360deg);
+    }
+
+}
+
+
+

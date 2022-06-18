@@ -13,7 +13,7 @@
 }
 
 .portfolio__item:hover {
-    box-shadow: inset 400px 0 0 0 #3EA7AD;
+    box-shadow: inset 450px 0 0 0 #3EA7AD;
 }
 
 .portfolio__item-image{

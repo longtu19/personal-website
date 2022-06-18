@@ -29,46 +29,8 @@ const App = () => {
         window.addEventListener("scroll", onScroll);
     }, []);
 
-    // componentDidMount(){
+    
 
-    //     $(window).scroll(function(){
-    //         var $window = $(window),
-    //             $body = $('body'),
-    //             $panel = $('.panel');
-            
-    //         var scroll = $window.scrollTop() + ($window.height() /3);
-    //         $panel.each(function (){
-    //             var $this = $(this);
-    //             if($this.position().top <= scroll &&
-    //             $this.position().top + $this.height() > scroll){
-    //             $body.removeClass(function(index, css){
-    //                 return (css.match(/(^|\s)color-\S+/g) || []).join('');
-    //             })
-        
-    //             $body.addClass('color' + $(this).data('color'));
-    //             }
-        
-            
-    //         })
-        
-    //         }).scroll();
-
-    // }
-
-        // $(function () {
-        //     'use strict';
-        //       var view = $(window).height();
-        //       $('.panel')
-        //       .height(view)
-        //       .scrollie({
-        //         scrolloffset: -50,
-        //         scrollingInView: function(elem) {
-        //           var bgColor = elem.data('background');
-        //           $('body').css('background-color', bgColor);
-        //         }
-          
-        //       })
-        //   })
         
 
     
@@ -87,7 +49,7 @@ const App = () => {
                     {data.map((group, i) => (
                         <div  
                             ref = {(el) => (GroupRef.current[i] = el)}
-                            style = {{height: "100%"}}
+                            style = {{height: "100%", maxWidth: "cover"}}
                             data-bgcolor = {group.theme.background}
                         
                         >
