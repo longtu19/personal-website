@@ -60,7 +60,7 @@ const HoverEpi = () => {
   return (
     <div className="container epi">
     <div className = "job__title ">
-      <h5>Software Engineering Intern</h5>
+      <h5 className = "epi-title">Software Engineering Intern</h5>
       <small className = "date">06/02/2022 - 08/24/2022</small>
 
     </div>
@@ -176,18 +176,26 @@ function Number() {
   };
 
   return (
-    <div className="row" id="metric">
-      <div className="odo row" ref={ref}>
-        <div className = "col-sm-12 col-lg-9">
-        <Odometer value={odometerVal} format="d" duration={1700} />
-        <span style = {{ fontSize: "50px", position: "absolute", marginTop: "2rem"}}>+</span>
+    <div className="container num">
+      <div className="odo" ref={ref}>
+        <div className = "sub_odo">
+          <div>
+          <Odometer value={odometerVal} format="d" duration={1700} />
+
+          </div>
+          
+          <div>
+          <span className = "plus">+</span>
+
+          </div>
+          
 
         </div>
         
       </div>
       
 
-      <div className="hour col-sm-12 col-lg-4 mt-2">HOURS WORKING</div>
+      <div className="hour">HOURS WORKING</div>
     </div>
   );
 }
@@ -255,7 +263,7 @@ const MainExp = () => {
           {!isCatsHovering &&
             !isEpiHovering &&
             !isM3Hovering &&
-            !isXcelHovering && <HoverM3 />}
+            !isXcelHovering && <Number />}
           {isEpiHovering && <HoverEpi />}
           {isCatsHovering && <HoverCats />}
           {isM3Hovering && <HoverM3 />}
