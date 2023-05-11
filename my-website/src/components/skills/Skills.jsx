@@ -3,7 +3,7 @@ import "./skills.css";
 import { SiJavascript } from "react-icons/si";
 import { SiPython } from "react-icons/si";
 import { AiFillCopyrightCircle } from "react-icons/ai";
-import { SiJava } from "react-icons/si";
+import { FaJava } from "react-icons/fa";
 import { SiScala } from "react-icons/si";
 import { SiHtml5 } from "react-icons/si";
 import { SiCss3 } from "react-icons/si";
@@ -63,7 +63,7 @@ const Skills = () => {
             <div className="outer-cell">
               <div data-text="Java" className="cell">
                 <article  className="skills__details">
-                  <SiJava
+                  <FaJava
                     color="orange"
                     fontSize="1.6em"
                     className="skills-icons"
