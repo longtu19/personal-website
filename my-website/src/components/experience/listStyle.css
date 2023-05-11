@@ -1,0 +1,155 @@
+.xcel{
+    margin-bottom: 9rem;
+}
+.cats{
+    margin-bottom: 20rem;
+}
+.m3c{
+    margin-bottom: 15rem;
+}
+
+
+.m3c, .xcel, .cats, .epi{
+    display: grid;
+    grid-template-columns: 1fr 2.2fr;
+    gap: 1rem;
+}
+
+section.list {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 2em;
+    line-height: 1.5em;
+    padding: 0.5em 1em;
+    /* max-width: 100em; */
+    height: 4em;
+    margin: 2px 1px;
+    /* max-width: 20rem; */
+    
+ 
+    
+    
+}
+.job__title{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+section.list .list-item .item-body li{
+    top: 5%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    border-radius: 2em;
+    padding: 0.5em 1.5em;
+    background: #A83800;
+    color: #C5EAF2;
+    margin-bottom: 1em;
+    gap: 1.4em;
+    perspective: 500px;
+
+}
+section.list .list-item .item-body{
+    flex: 0 1 calc(100% - 52px);
+}
+section.list .list-item .item-body li {
+      opacity: 0;
+      animation: stagger ease-in 0.4s forwards 1;
+      animation-delay: calc(var(--order) * 0.2s);
+}
+
+
+
+
+
+@keyframes stagger {
+      from {
+          opacity: 0;
+          transform: rotateX(-90deg);
+          transition: all 0.5s cubic-bezier(.36,-0.64,.34,1.76);
+      }
+      to {
+          opacity: 1;
+          transform: none;
+          transition: all 0.5s cubic-bezier(.36,-0.64,.34,1.76);
+      }
+  }
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+    
+    .job__title .date{
+        padding: 10px;
+    }
+    .xcel {
+        margin-bottom: 3rem;
+        
+    }
+    .cats {
+        margin-bottom: 24rem;
+    }
+    .epi{
+        margin-bottom: 11rem;
+    }
+
+    .m3c{
+        margin-bottom: 14rem;
+    }
+
+    .m3c, .xcel, .cats, .epi{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+   
+
+
+    
+   
+    
+
+}
+
+
+
+@media screen and (max-width: 600px) {
+    
+    .xcel {
+        margin-bottom: 16rem;
+    }
+    .cats {
+        margin-bottom: 57rem;
+    }
+    .epi {
+        margin-bottom: 42rem;
+    }
+
+    .m3c{
+        margin-bottom: 46rem;
+    }
+
+    .job__title{
+        margin-top: 1rem;
+
+    }
+
+    .epi-title{
+        font-size: 19px;
+        font-weight: 500;
+    }
+   
+
+   
+  
+    
+
+}

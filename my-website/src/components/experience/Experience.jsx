@@ -1,16 +1,16 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./experience.css";
 import "./listStyle.css";
-import epifinder from "../../assets/epi.png";
+import umassSign from "../../assets/umassSign.jpg";
 import xcel from "../../assets/xcel.jpg";
 import catsboston from "../../assets/catsboston.jpg";
 import m3 from "../../assets/m3.jpg";
 import Odometer from "react-odometerjs";
 import "odometer/themes/odometer-theme-default.css";
-import {xCel, cats, epi, m3c} from './jobs'
+import {xCel, cats, mentor, m3c} from './jobs'
 const Experience = ({
-  EpiMouseOver,
-  EpiMouseOut,
+  MentorMouseOver,
+  MentorMouseOut,
 
   CatsMouseOver,
   CatsMouseOut,
@@ -25,10 +25,10 @@ const Experience = ({
     <div className="slider">
       <span
         style={{ "--i": 1 }}
-        onMouseOver={EpiMouseOver}
-        onMouseOut={EpiMouseOut}
+        onMouseOver={MentorMouseOver}
+        onMouseOut={MentorMouseOut}
       >
-        <img src={epifinder} alt="" />
+        <img src={umassSign} alt="" />
       </span>
 
       <span
@@ -56,19 +56,19 @@ const Experience = ({
   );
 };
 
-const HoverEpi = () => {
+const HoverMentor = () => {
   return (
     <div className="container epi">
     <div className = "job__title ">
-      <h5 className = "epi-title">Software Engineering Intern</h5>
-      <small className = "date">06/02/2022 - 08/24/2022</small>
+      <h5 className = "epi-title">Peer Mentor</h5>
+      <small className = "date">09/09/2022 - Present</small>
 
     </div>
    
     <section className = "list">
       <div className="list-item">
         <div className = "item-body" >
-          {epi.map((e, idx) => (
+          {mentor.map((e, idx) => (
             <li style = {{"--order": idx}}>{e.task}</li>
           ))}
         </div>
@@ -83,7 +83,7 @@ const HoverCats = () => {
   return (
     <div className="container cats">
       <div className = "job__title">
-        <h5>Robotic Developer</h5>
+        <h5>Software-Robotic Developer</h5>
         <small className = "date">02/01/2018 - 11/24/2019</small>
 
       </div>
@@ -201,13 +201,13 @@ function Number() {
 }
 
 const MainExp = () => {
-  const [isEpiHovering, setIsEpiHovering] = useState(false);
-  const EpiMouseOver = () => {
-    setIsEpiHovering(true);
+  const [isMentorHovering, setIsMentorHovering] = useState(false);
+  const MentorMouseOver = () => {
+    setIsMentorHovering(true);
   };
 
-  const EpiMouseOut = () => {
-    setIsEpiHovering(false);
+  const MentorMouseOut = () => {
+    setIsMentorHovering(false);
   };
 
   const [isCatsHovering, setIsCatsHovering] = useState(false);
@@ -244,9 +244,9 @@ const MainExp = () => {
       <div className="container exp-container mt-3">
         <div className="left">
           <Experience
-            EpiMouseOver={EpiMouseOver}
-            EpiMouseOut={EpiMouseOut}
-            isEpiHovering={isEpiHovering}
+            MentorMouseOver={MentorMouseOver}
+            MentorMouseOut={MentorMouseOut}
+            isMentorHovering={isMentorHovering}
             CatsMouseOver={CatsMouseOver}
             CatsMouseOut={CatsMouseOut}
             isCatsHovering={isCatsHovering}
@@ -261,10 +261,10 @@ const MainExp = () => {
 
         <div className="right">
           {!isCatsHovering &&
-            !isEpiHovering &&
+            !isMentorHovering &&
             !isM3Hovering &&
             !isXcelHovering && <Number />}
-          {isEpiHovering && <HoverEpi />}
+          {isMentorHovering && <HoverMentor />}
           {isCatsHovering && <HoverCats />}
           {isM3Hovering && <HoverM3 />}
           {isXcelHovering && <HoverXcel />}

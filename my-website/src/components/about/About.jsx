@@ -71,14 +71,13 @@ const About = () => {
               contribute to the real world, I am currently seeking for an{" "}
               <span style={{ color: "#3B46DB" }}>internship</span> as a{" "}
               <span style={{ color: "#3B46DB" }}>Software Engineer</span>{" "}
-              position in an industrial company. With my skills and the ability
+            in an industrial company. With my skills and the ability
               to quickly learn new things, I believe I can rapidly close any
               knowledge gaps to become a valuable contributor to the company I
               will be working with!
               <br></br>
-              <br></br> <span style={{ color: "#3B46DB" }}>My hobbies: </span>{" "}
-              watch movies and soccer matches, go swimming, play 
-              Chinese chess, and read news!{" "}
+              <br></br> <span style={{ color: "#3B46DB" }}>Here are some of my hobbies: </span>{" "}
+              rock climbing, swimming, jogging, playing soccer, table tennis, badminton, and basketball, playing chess and Chinese chess, playing piano, hanging out with friends, watching movies, volunteering, reading books and investing.{" "}
             </p>
             <a href="#contact" className="btn btn-about">
               Let's Talk

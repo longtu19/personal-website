@@ -1,0 +1,147 @@
+.container.awards__container {
+  width: 40%;
+  padding-bottom: 4rem;
+}
+
+.award__title {
+    cursor:default;
+    color: #39A814;
+}
+
+.award__subtitle {
+    cursor: default;
+    color: #39A814;
+}
+
+
+/* .award {
+    position: relative;
+    overflow: hidden;
+    max-height: 100%;
+} */
+
+.award__info {
+    width: 100%;
+    height: 17rem;
+    overflow: hidden;
+
+}
+
+.awd_pic{
+    height: 17rem;
+
+}
+
+.award {
+    overflow: hidden;
+    position: relative;
+    display: block;    
+    justify-content: center;
+    color: var(--color-white);
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    border-radius: 2rem;
+
+}
+.award__info:before{
+    position: absolute;
+    content: '';
+    background: black;
+    height: 17rem;
+    width: 100%;
+    left: 0%;
+    opacity: 0.5;
+    overflow: hidden;
+
+}
+
+.award:hover .title{
+    top: 10%;
+    opacity: 0;
+    visibility: hidden;
+
+}
+.award:hover .details{
+    top: 28%;
+
+}
+
+
+
+.title {
+    overflow: hidden;
+    position: absolute;
+    transition: 0.5s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+    font-size: x-large;
+
+
+}
+
+
+
+.details {
+    overflow: hidden;
+    font-size: medium;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: absolute;
+    display: flex;
+    top: 100%;
+    transition: 0.8s;
+
+}
+
+p {
+    overflow: hidden;
+    margin: 0;
+    color: var(--color-white);
+
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet{
+    background: #ACF53E;
+}
+
+@media screen and (max-width: 1024px) {
+    .container.awards__container {
+        width: 60%;
+
+    }
+
+    .award:hover .details{
+        top: 20%;
+    
+    }
+
+    
+}
+
+/* ====== Media (SMALL DEVICES) ====== */
+
+@media screen and (max-width: 600px) {
+    .container.awards__container {
+        width: var(--containter-width-sm);
+    }
+
+    p {
+        width: var(--containter-width-sm);
+    }
+
+    .details p {
+        font-size: smaller;
+    }
+
+    .award:hover .details{
+        top: 10%;
+    
+    }
+}
+
+
