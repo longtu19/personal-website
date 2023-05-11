@@ -13,11 +13,11 @@
 
 
 .big__title {
-    color: #F59351;
+    color: #083A7A;
 }
 
 #title {
-    color: #FFA96E;
+    color: #14498d;
 }
 
 
@@ -29,7 +29,7 @@
     background: linear-gradient(
         45deg,
         transparent,
-        #FFA96E,
+        #5486C7,
         transparent
     );
     margin-left: 20%;
@@ -57,17 +57,18 @@
 }
 
 .about__card {
-    background: #FFA16E;
+    background: #5486C7;
     border: 1px solid transparent;
     border-radius: 1rem;
     padding: 2rem;
     text-align: center;
+    color: #FFE04F;
     transition: var(--transition);
 }
 
 .about__card:hover {
     background: transparent;
-    border-color: var(--color-primary-variant);
+    border-color: #5486C7;
     cursor: default;
 }
 
@@ -76,16 +77,34 @@
     font-size: 1.4rem;
     margin-bottom: rem;
 }
+.about__card:hover .about__icon {
+    color: #5486C7;
+    font-size: 1.4rem;
+    margin-bottom: rem;
+}
 
 .about__card h5 {
     font-size: 0.95rem;
-    color:  #164EA3;
+    color:  #FFE04F;
 }
+
 
 .about__card small {
     font-size: 0.7rem;
-    color: #164EA3 ;
+    color: #FFE04F;
 }
+.about__card:hover h5 {
+    font-size: 0.95rem;
+    color: #5486C7;
+}
+.about__card:hover small {
+    font-size: 0.7rem;
+    color: #5486C7;
+}
+
+
+
+
 
 .about__content  {
     margin-left: 30%;
@@ -103,6 +122,7 @@
 
 .intro_me{
     cursor: default;
+     
 }
 
 /* ====== Media (MEDIUM DEVICES) ====== */

@@ -40,44 +40,16 @@ const About = () => {
                 <small>5+ Completed</small>
               </article>
             </div>
-            <p className = "intro_me">
-              My first interaction with programming was with{" "}
-              <span style={{ color: "#3B46DB" }}>Pascal </span>at the age of 11
-              and I quickly got interested in learning the language and started
-              making small projects with it. Then, during high school, I learned
-              to build websites using{" "}
-              <span style={{ color: "#3B46DB" }}>HTML</span>,{" "}
-              <span style={{ color: "#3B46DB" }}>CSS</span>, and{" "}
-              <span style={{ color: "#3B46DB" }}>JQuery</span>. On top of that,
-              I learned problems solving with{" "}
-              <span style={{ color: "#3B46DB" }}>Java</span>. Observing the
-              incredible convenience of technology in people's daily lives and
-              having a prior experience with programming and mathematics, I
-              decided to pursue{" "}
-              <span style={{ color: "#3B46DB" }}>Computer Science</span> and{" "}
-              <span style={{ color: "#3B46DB" }}>Applied Mathematics</span> at
-              the{" "}
-              <span style={{ color: "#3B46DB" }}>
-                University of Massachusetts Amherst
-              </span>
-              . After more than 2 years of learning and working on hands-on
-              projects, ranging from terminal-based, object-oriented programming
-              projects using{" "}
-              <span style={{ color: "#3B46DB" }}>JavaScript</span> and{" "}
-              <span style={{ color: "#3B46DB" }}>C</span> to networks and
-              dynamic websites with{" "}
-              <span style={{ color: "#3B46DB" }}>React</span>, I improved my
-              ability to code with optimization and efficiency. With a desire to
-              contribute to the real world, I am currently seeking for an{" "}
-              <span style={{ color: "#3B46DB" }}>internship</span> as a{" "}
-              <span style={{ color: "#3B46DB" }}>Software Engineer</span>{" "}
-            in an industrial company. With my skills and the ability
-              to quickly learn new things, I believe I can rapidly close any
-              knowledge gaps to become a valuable contributor to the company I
-              will be working with!
-              <br></br>
-              <br></br> <span style={{ color: "#3B46DB" }}>Here are some of my hobbies: </span>{" "}
-              rock climbing, swimming, jogging, playing soccer, table tennis, badminton, and basketball, playing chess and Chinese chess, playing piano, hanging out with friends, watching movies, volunteering, reading books and investing.{" "}
+            <p className = "intro_me" style={{color: '#083A7A'}}>
+            Hi there, <br></br>
+            <br></br>
+            I'm a fan of coding and technology in general. I've had the pleasure of building a full-stack web application using JavaScript, React, HTML, and CSS, and it was an incredibly rewarding experience. On top of that, I've also worked with machine learning models. For example, I had a great experience creating and training a model to identify different numbers' images using Convolutional Neural Network (CNN)/K-nearest neighbors (KNN) algorithms.
+        But that's not all - I'm always eager to learn new skills or technologies, and I'm constantly exploring new projects and ideas. <br></br>
+        <br></br>When I'm not coding, I like to stay active by playing soccer, hiking, and joggling. It's a great way to keep my mind and body sharp, especially after spending hours sitting in front of a computer screen.<br></br>
+<br></br>Currently, I'm seeking an internship/co-op for Fall 2023 and a new grad position for 2024 in software engineer roles. I'm excited to join a team that shares my passion for technology and can help me develop my skills even further.
+If you're looking for someone who's both a tech enthusiast and a lover of the great outdoors, then look no further! I'm eager to learn, grow, and contribute in any way I can.
+            
+           
             </p>
             <a href="#contact" className="btn btn-about">
               Let's Talk

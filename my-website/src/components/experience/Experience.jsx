@@ -2,33 +2,34 @@ import React, { useEffect, useRef, useState } from "react";
 import "./experience.css";
 import "./listStyle.css";
 import umassSign from "../../assets/umassSign.jpg";
-import xcel from "../../assets/xcel.jpg";
+import hack_pic from "../../assets/hackUmass.png";
 import catsboston from "../../assets/catsboston.jpg";
-import m3 from "../../assets/m3.jpg";
+import dct_pic from "../../assets/DCT.png"
+import dell_logo from "../../assets/Dell.png"
 import Odometer from "react-odometerjs";
 import "odometer/themes/odometer-theme-default.css";
-import {xCel, cats, mentor, m3c} from './jobs'
+import {hackathon, dell, dct, cats} from './jobs'
 const Experience = ({
-  MentorMouseOver,
-  MentorMouseOut,
+  DellMouseOver,
+  DellMouseOut,
 
   CatsMouseOver,
   CatsMouseOut,
 
-  XcelMouseOver,
-  XcelMouseOut,
+  HackMouseOver,
+  HackMouseOut,
 
-  M3MouseOver,
-  M3MouseOut,
+  dctMouseOver,
+  dctMouseOut,
 }) => {
   return (
     <div className="slider">
       <span
         style={{ "--i": 1 }}
-        onMouseOver={MentorMouseOver}
-        onMouseOut={MentorMouseOut}
+        onMouseOver={DellMouseOver}
+        onMouseOut={DellMouseOut}
       >
-        <img src={umassSign} alt="" />
+        <img src={dell_logo} alt="" />
       </span>
 
       <span
@@ -40,35 +41,35 @@ const Experience = ({
       </span>
       <span
         style={{ "--i": 3 }}
-        onMouseOver={M3MouseOver}
-        onMouseOut={M3MouseOut}
+        onMouseOver={dctMouseOver}
+        onMouseOut={dctMouseOut}
       >
-        <img src={m3} alt="" />
+        <img src={dct_pic} alt="" />
       </span>
       <span
         style={{ "--i": 4 }}
-        onMouseOver={XcelMouseOver}
-        onMouseOut={XcelMouseOut}
+        onMouseOver={HackMouseOver}
+        onMouseOut={HackMouseOut}
       >
-        <img src={xcel} alt="" />
+        <img src={hack_pic} alt="" />
       </span>
     </div>
   );
 };
 
-const HoverMentor = () => {
+const HoverDell = () => {
   return (
     <div className="container epi">
     <div className = "job__title ">
-      <h5 className = "epi-title">Peer Mentor</h5>
-      <small className = "date">09/09/2022 - Present</small>
+      <h5 className = "epi-title">Incoming Software Engineer Intern</h5>
+      <small className = "date">05/30/2023 - 08/18/2023</small>
 
     </div>
    
     <section className = "list">
       <div className="list-item">
         <div className = "item-body" >
-          {mentor.map((e, idx) => (
+          {dell.map((e, idx) => (
             <li style = {{"--order": idx}}>{e.task}</li>
           ))}
         </div>
@@ -103,19 +104,19 @@ const HoverCats = () => {
     
   );
 };
-const HoverM3 = () => {
+const HoverDct = () => {
   return (
     <div className="container m3c">
     <div className = "job__title ">
-      <h5>Team Leader</h5>
-      <small className = "date">02/12/2019 - 02/20/2020</small>
+      <h5>Software Engineer Intern</h5>
+      <small className = "date">02/12/2023 - Present</small>
 
     </div>
    
     <section className = "list">
       <div className="list-item">
         <div className = "item-body" >
-          {m3c.map((e, idx) => (
+          {dct.map((e, idx) => (
             <li style = {{"--order": idx}}>{e.task}</li>
           ))}
         </div>
@@ -127,19 +128,19 @@ const HoverM3 = () => {
 
   );
 };
-const HoverXcel = () => {
+const HoverHackathon= () => {
   return (
     <div className="container xcel">
       <div className = "job__title">
-        <h5>Maths Tutor</h5>
-        <small className = "date">06/02/2019 - 08/24/2019</small>
+        <h5>Team Lead</h5>
+        <small className = "date">11/17/2023 - 11/19/2023</small>
 
       </div>
      
       <section className = "list">
         <div className="list-item">
           <div className = "item-body" >
-            {xCel.map((e, idx) => (
+            {hackathon.map((e, idx) => (
               <li key = {idx} style = {{"--order": idx}}>{e.task}</li>
             ))}
           </div>
@@ -201,13 +202,13 @@ function Number() {
 }
 
 const MainExp = () => {
-  const [isMentorHovering, setIsMentorHovering] = useState(false);
-  const MentorMouseOver = () => {
-    setIsMentorHovering(true);
+  const [isDellHovering, setIsDellHovering] = useState(false);
+  const DellMouseOver = () => {
+    setIsDellHovering(true);
   };
 
-  const MentorMouseOut = () => {
-    setIsMentorHovering(false);
+  const DellMouseOut = () => {
+    setIsDellHovering(false);
   };
 
   const [isCatsHovering, setIsCatsHovering] = useState(false);
@@ -219,22 +220,22 @@ const MainExp = () => {
     setIsCatsHovering(false);
   };
 
-  const [isXcelHovering, setIsXcelHovering] = useState(false);
-  const XcelMouseOver = () => {
-    setIsXcelHovering(true);
+  const [isHackHovering, setIsHackHovering] = useState(false);
+  const HackMouseOver = () => {
+    setIsHackHovering(true);
   };
 
-  const XcelMouseOut = () => {
-    setIsXcelHovering(false);
+  const HackMouseOut = () => {
+    setIsHackHovering(false);
   };
 
-  const [isM3Hovering, setIsM3Hovering] = useState(false);
-  const M3MouseOver = () => {
-    setIsM3Hovering(true);
+  const [isDctHovering, setIsDctHovering] = useState(false);
+  const dctMouseOver = () => {
+    setIsDctHovering(true);
   };
 
-  const M3MouseOut = () => {
-    setIsM3Hovering(false);
+  const dctMouseOut = () => {
+    setIsDctHovering(false);
   };
 
   return (
@@ -244,30 +245,30 @@ const MainExp = () => {
       <div className="container exp-container mt-3">
         <div className="left">
           <Experience
-            MentorMouseOver={MentorMouseOver}
-            MentorMouseOut={MentorMouseOut}
-            isMentorHovering={isMentorHovering}
+            DellMouseOver={DellMouseOver}
+            DellMouseOut={DellMouseOut}
+            isDellHovering={isDellHovering}
             CatsMouseOver={CatsMouseOver}
             CatsMouseOut={CatsMouseOut}
             isCatsHovering={isCatsHovering}
-            XcelMouseOver={XcelMouseOver}
-            XcelMouseOut={XcelMouseOut}
-            isXcelHovering={isXcelHovering}
-            M3MouseOver={M3MouseOver}
-            M3MouseOut={M3MouseOut}
-            isM3Hovering={isM3Hovering}
+            HackMouseOver={HackMouseOver}
+            HackMouseOut={HackMouseOut}
+            isHackHovering={isHackHovering}
+            dctMouseOver={dctMouseOver}
+            dctMouseOut={dctMouseOut}
+            isDctHovering={isDctHovering}
           />
         </div>
 
         <div className="right">
           {!isCatsHovering &&
-            !isMentorHovering &&
-            !isM3Hovering &&
-            !isXcelHovering && <Number />}
-          {isMentorHovering && <HoverMentor />}
+            !isDellHovering &&
+            !isDctHovering &&
+            !isHackHovering && <Number />}
+          {isDellHovering && <HoverDell />}
           {isCatsHovering && <HoverCats />}
-          {isM3Hovering && <HoverM3 />}
-          {isXcelHovering && <HoverXcel />}
+          {isDctHovering && <HoverDct />}
+          {isHackHovering && <HoverHackathon/>}
         </div>
       </div>
     </section>

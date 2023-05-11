@@ -1,51 +1,48 @@
-export const xCel = [
+export const hackathon = [
   {
     id: 0,
-    task: "Instructed middle-aged people to prepare them for math exams for industrial working",
+    task: "Led a team of 4 people to build a platform using React to help students find roommates and housings during the 36-hour Hackathon competition"
   },
   {
     id: 1,
-    task: "Improved tutee's grades from B- to A and increased their probability of passing the exams by 95%",
+    task: "Upgraded the site to output the top matched people or houses according to user’s filter such as gender, school year, living area, hobby, extra notes, etc."
   },
   {
     id: 2,
-    task: "Gained the ability to communicate mathematical concepts to learners of diverse skill sets",
-  },
-];
-export const mentor = [
-  {
-    id: 0,
-    task: "Meet with a first-year student once a week to discuss about courses, college life, concerns, and career over a meal or coffee",
-  },
-  {
-    id: 1,
-    task: "Instruct the mentee in Computer Science concepts such as class, methods, objects, encapsulation in the Introduction to Programming course",
-  },
-  {
-    id: 2,
-    task: "Maintain records of interactions with the mentee in a spreadsheet or google form and report to lead supervisor",
-  },
-];
-export const m3c = [
-  {
-    id: 0,
-    task: "Led a team of 5 high school seniors to create methodical mathematical models to solve given world problems",
-  },
-  {
-    id: 1,
-    task: "Built a model using Java, mathematics, and statistic to predict what percentage of semi-truck will be electric in the next few years",
-  },
-  {
-    id: 2,
-    task: "Enabled the model to determine the needed number of locations of charging stations along major U.S. trucking routes",
+    task: "Reduced by 80% estimated amount of time for students to successfully get a roommate or housing in comparison with that of the school’s website"
   },
   {
     id: 3,
-    task: "Upgraded the model to prioritize which routes to develop first with electric charging infrastructure",
+    task: "Improved interactive UI/UX and advanced to the best 5 out of 62 teams"
+  }
+];
+export const dell = [
+  {
+    id: 0,
+    task: "I'm thrilled to join Dell Technologies as a Software Engineer Intern this summer 2023!",
+  },
+  
+];
+export const dct = [
+  {
+    id: 0,
+    task: "Work with a team of 8 in Agile methodology to develop an internal system to manage and track working time of employees and managers"
+  },
+  {
+    id: 1,
+    task: "Implement components using React, HTML/CSS, Bootstrap to let employees and managers enter their own working hours daily or see their payrolls"
+  },
+  {
+    id: 2,
+    task: "Upgrade the system to allow only authenticated managers to check their teammates’ hours worked or salary earned"
+  },
+  {
+    id: 3,
+    task: "Build backend Restful API using NodeJS, ExpressJS, MongoDB to store users’ data and fetch it to the frontend"
   },
   {
     id: 4,
-    task: "Improved leadership, analytical thinking, and teamwork skills by competing in the challenge",
+    task: "Expect to receive around 1000 concurrent users when it goes live; with all performs heavy duty actions such as viewing payrolls in a time duration"
   },
 ];
 export const cats = [

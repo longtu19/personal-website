@@ -9,7 +9,7 @@ import Contact from './components/contact/Contact'
 export const data = [
     {
         src: <About />,
-        theme: {background: '#16A8A3'},
+        theme: {background: '#F5D2C9'},
 
     },
     {   

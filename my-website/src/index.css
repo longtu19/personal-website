@@ -136,14 +136,15 @@ a:hover {
   color: var(--color-bg);
 }
 .btn-about {
-    background: #f6fabf;
+    background: #F5D2C9;
     color: #164EA3;
+    border-color: #164EA3;
    
 }
 .btn-about:hover {
-    background: #164EA3;
-    color: #f6fabf;
-    border-color: var(--color-primary-variant);
+    background:  #164EA3;
+    color: #F5D2C9;
+    border-color: #164EA3;
     cursor: default;
 }
 
